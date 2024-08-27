@@ -1,0 +1,111 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('aspire-africa.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Container Styles */
+.task-tracker {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent; /* Fully transparent background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color:white;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Task Cards */
+.task-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+}
+
+.task-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+}
+
+/* Form Styles */
+.task-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-label,
+.task-input,
+.deadline-input,
+.license-input,
+.tax-input {
+    margin-bottom: 10px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Task List Styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .task-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
